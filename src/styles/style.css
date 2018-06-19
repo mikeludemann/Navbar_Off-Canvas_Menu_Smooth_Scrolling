@@ -124,10 +124,3 @@ div.menu {
         overflow-y: auto;
     }
 }
-
-@media screen and (max-height: 400px) {
-    .navbar {
-        min-height: 300px !important;
-        overflow-y: scroll;
-    }
-}
