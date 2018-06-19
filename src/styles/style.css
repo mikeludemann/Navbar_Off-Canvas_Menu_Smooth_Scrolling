@@ -1,0 +1,133 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-bottom: 1px solid #000;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 10px;
+    border-top: 1px solid #000;
+    background-color: #fff;
+}
+
+section {
+    position: relative;
+    margin-top: 50px;
+    top: 0;
+    left: 0;
+    margin-bottom: 50px;
+    padding: 0px 10px;
+}
+
+div.navbar {
+    background-color: #fff;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+div.navbar a {
+    display: inline-block;
+    color: #000;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.navbar a:hover {
+    text-decoration: underline;
+}
+
+div.navbar a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div.menu {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 420px) {
+    div.navbar {
+        position: absolute;
+        width: 240px;
+        min-height: 500px !important;
+        max-height: 800px !important;
+        transition: all 1s;
+        overflow-y: auto;
+    }
+
+    .left {
+        left: -240px;
+    }
+
+    .right {
+        right: -240px;
+    }
+
+    div.menu {
+        display: block;
+        background-color: #fff;
+        transition: all 1s;
+    }
+
+    .icon {
+        padding: 10px;
+        height: 20px;
+        width: 20px;
+        transition: all 1s;
+    }
+
+    .active {
+        font-weight: bold;
+    }
+
+    div.navbar a {
+        display: block !important;
+    }
+
+    .show-right {
+        position: absolute;
+        width: 240px;
+        min-height: 500px;
+        max-height: 800px;
+        right: 0px !important;
+        margin-top: 1px;
+        transition: all 1s;
+        overflow-y: auto;
+    }
+
+    .show-left {
+        position: absolute;
+        width: 240px;
+        min-height: 500px;
+        max-height: 800px;
+        left: 0px !important;
+        margin-top: 1px;
+        transition: all 1s;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .navbar {
+        min-height: 300px !important;
+        overflow-y: scroll;
+    }
+}
